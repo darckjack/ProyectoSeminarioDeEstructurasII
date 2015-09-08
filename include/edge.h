@@ -1,6 +1,8 @@
 #ifndef EDGE_H
 #define EDGE_H
 
+#define DELIMITER '|'
+
 #include <string>
 
 class Edge {
@@ -29,6 +31,6 @@ private:
 	std::string m_destiny;
 	float		m_weight;
 
-}
+};
 
 #endif // EDGE_H
