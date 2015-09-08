@@ -84,6 +84,10 @@ int main() {
             }
             system("pause");
             break;
+            
+        case '8':
+        
+            break;
 
         default:
             cout << "Opcion incorrecta..." << endl;
