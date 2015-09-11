@@ -3,7 +3,9 @@
 
 #define DELIMITER '|'
 
+#include <iostream>
 #include <string>
+#include <fstream>
 
 class Edge {
 public:
@@ -22,9 +24,13 @@ public:
 	
 	// CRUD Functions
 	void createEdge();
+	void createEdge(std::string);
 	void showEdges();
 	void updateEdge();
 	void deleteEdge();
+	void deleteEdgesOr(std::string);
+	void deleteEdgesDes(std::string);
+	void searchEdge();
 
 private:
 	std::string m_origin;

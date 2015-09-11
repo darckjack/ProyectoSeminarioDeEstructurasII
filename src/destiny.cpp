@@ -123,6 +123,8 @@ void Destiny::readDestiny() {
                 cout << "el destino no requiere un impuesto extra" << endl;
 
             }
+            
+            cout << endl;
 
         }
     }
@@ -265,7 +267,9 @@ void Destiny::deleteDestiny(unsigned int id) {
 }
 
 void Destiny::searchDestinyById(unsigned int id) {
+    
     ifstream infile("destinos.dat");
+    
     if(!infile.good())
         cout<<"No existe el archivo"<<endl<<endl;
     else {

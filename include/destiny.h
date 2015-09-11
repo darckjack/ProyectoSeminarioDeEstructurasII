@@ -32,9 +32,6 @@ class Destiny
         void searchDestinyByType(bool); // buscar por nombre
         void searchDestinyByAviability(bool); // buscar por disponibilidad
 
-
-    protected:
-    private:
         unsigned int m_id;
         char m_name[30];
         bool m_aviability;

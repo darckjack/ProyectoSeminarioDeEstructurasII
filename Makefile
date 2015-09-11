@@ -21,3 +21,4 @@ $(EXECUTABLE): $(OBJECTS)
 clean: 
 	$(RM) $(EXECUTABLE)
 	$(RM) $(OBJECTS)
+	$(RM) *.dat
