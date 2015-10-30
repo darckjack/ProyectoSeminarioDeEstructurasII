@@ -7,18 +7,21 @@
 #include <iostream>
 #include "include/destiny.h"
 #include "include/edge.h"
+#include "include/client.h"
 
 using namespace std;
 
 int main() {
     Destiny des;
     Edge ed;
+    Client cli;
     int opc;
     int aux;
     string auxOr;
     char trueOrFalse;
     bool aux2;
     do {
+        cli.makeFile();
         system(CLEAR);
         cout << "Destinos" << endl << endl;
         cout << "1.-Agregar un destino" << endl;
@@ -28,9 +31,9 @@ int main() {
         cout << "5.-Buscar un destino por codigo" << endl;
         cout << "6.-Buscar un destino por tipo" << endl;
         cout << "7.-Buscar un destino por disponibilidad" << endl;
-        cout << "8.-Crear conexion" << endl;
+        cout << "8.-Crear cliente" << endl;
         cout << "9.-Buscar una conexion" << endl;
-        cout << "10.-Mostrar conexiones" << endl;
+        cout << "10.-Mostrar clientes" << endl;
         cout << "11.-Modificar una conexion" << endl;
         cout << "12.-Eliminar una conexion" << endl;
         cout << "13.-Salir" << endl;
@@ -106,7 +109,7 @@ int main() {
             break;
         
         case 8:
-            ed.createEdge();
+            cli.addClient();
             break;
             
         case 9:
@@ -115,7 +118,7 @@ int main() {
             break;
             
         case 10:
-            ed.showEdges();
+            cli.showClients();
             cin.get();
             break;
             

@@ -260,7 +260,7 @@ void Edge::deleteEdgesDes(string destiny) {
             
             inFile >> m_destiny >> m_weight;
 
-            if(destiny != m_destiny) {
+            if(destiny == m_destiny) {
                 
                 outFile << m_origin << " " << m_destiny << " " << m_weight << endl;
                 

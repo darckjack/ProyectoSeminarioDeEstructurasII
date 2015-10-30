@@ -6,7 +6,7 @@ endif
 
 CC=g++
 CFLAGS=-c -Wall -std=c++11
-SOURCES=main.cpp src/destiny.cpp src/edge.cpp
+SOURCES=main.cpp src/destiny.cpp src/edge.cpp src/client.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 
 
