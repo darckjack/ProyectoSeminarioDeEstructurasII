@@ -16,5 +16,5 @@ Para compilar el proyecto simplemente ejecutar el comando:
 Y para ejecutarlo lanzar:
 
 ```
-    $ bin/proyecto
+    $ bin/proyecto.out
 ```
