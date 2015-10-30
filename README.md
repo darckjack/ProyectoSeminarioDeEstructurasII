@@ -7,7 +7,7 @@ problemas de estructuras de datos.
 Compilacion
 ------------
 
-Para compilar el __proyecto__ simplemente _ejecutar_ el comando:
+Para compilar el proyecto simplemente ejecutar el comando:
 
 ```
    $ make
