@@ -120,7 +120,7 @@ void Destiny::readDestiny() {
 
             } else {
 
-                cout << "el destino no requiere un impuesto extra" << endl;
+                cout << "l destino no requiere un impuesto extra" << endl;
 
             }
             

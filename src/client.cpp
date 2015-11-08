@@ -30,7 +30,6 @@ void Client::makeFile() {
 long int Client::hashing(Client aux) {
     m_dirBase = 0;
 
-    cout << "entrando" << endl;
 
     m_dirBase = m_dirBase + (100 + aux.m_name[0]) + 
         			(aux.m_name[1] % 84645);
@@ -128,7 +127,47 @@ void Client::showClients() {
 }
 
 void Client::updateClient(int id) {
-	
+	Client aux;
+	long int pos = 0;
+	long int auxPos = 0;
+	int cont = 0;
+
+    fstream inFile(CLIENT_FILE, ios::in | ios::out);
+
+    if (!inFile.good())
+    {
+        cout << "No existe el archivo" << endl;
+    } else {
+        while(!inFile.eof()) {
+            inFile.seekg(pos, ios::beg);
+            inFile.read((char*)&cont, sizeof(int));
+            if (cont == 0)
+            {
+                pos = pos + (4 * sizeof(aux)) + sizeof(int);
+            } else {
+                for (int i = 0; i < cont; i++)
+                {   
+                    auxPos = inFile.tellg();
+                    inFile.read((char*)&aux, sizeof(aux));
+                    if (aux.m_id == id) {
+                        cout << "Ingresa el nuevo nombre del cliente:" << endl;
+                    	cin.getline(aux.m_name, 40);
+                    	
+                    	cout << "Ingresa el nuevo correo electronico del cliente:" << endl;
+                    	cin.getline(aux.m_email, 35);
+                    	
+                    	cout << "Ingresa el nuevo telefono del cliente" << endl;
+                    	cin.getline(aux.m_phone, 15);
+                    	inFile.seekp(auxPos, ios::beg);
+                    }
+                }
+
+                pos = pos + (4 * sizeof(aux)) + sizeof(int);
+            }
+        }
+    }
+
+    inFile.close();
 }
 
 void Client::deleteClient(int id) {
